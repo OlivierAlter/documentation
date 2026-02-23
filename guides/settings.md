@@ -8,16 +8,19 @@ Learn how to customize Alter to match your preferences, manage your account, con
 
 ### 1. Access Settings
 
-There are three ways to open Settings:
+There are multiple ways to open Settings:
 
 **Option 1: Menu Bar**
 Click the Alter icon in the menu bar and select **Settings...** from the dropdown menu.
 
-**Option 2: Notch Menu**
-Click the three-dot menu icon (⋮) in the Alter notch and select **Settings**.
-
-**Option 3: Keyboard Shortcut**
+**Option 2: Keyboard Shortcut**
 Press **⌘ , (Command + Comma)** to open Settings directly.
+
+**Option 3: Command Palette**
+Open the Alter notch or Hub and type `/settings` to access Settings via the command palette.
+
+**Option 4: Notch Menu**
+Click the three-dot menu icon (⋮) in the Alter notch and select **Settings**.
 
 ![Menu Bar Access](https://alterhq.com/assets-doc/images/settings/Alter-Menu_Bar-Menu.webp)
 
