@@ -1,6 +1,8 @@
 # Guides Index
 
+- `guides/settings.md` - comprehensive settings configuration guide
 - `guides/manage-settings.md` - full settings walkthrough
+- `guides/alter-actions.md` - create and configure custom Alter Actions with voice triggers
 - `guides/tool-manager.md` - tools and integrations setup
 - `guides/workspaces-actions.md` - combining workspaces with actions
 - `guides/getting-started.md` - onboarding and first interactions

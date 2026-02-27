@@ -29,71 +29,44 @@ By default, Alter is set up with `/best` , our internal model router, choosing t
 You can change the default model in **Settings > Defaults > Model**.  
 
 
-#### List of the models via Alter CLoud
+#### List of the models via Alter Cloud
 
+Alter provides access to **92+ models across 10 providers** through its unified router. Use the `/models` endpoint to list current models, or see the **[API Gateway Guide](../guides/api-gateway.md)** for detailed model information.
 
+**Provider Overview (as of Beta 71):**
 
-  ##### Model with vision
-  <details>
+| Provider | Model Count | Example Models |
+|----------|-------------|-----------------|
+| **Alter** | 4 | `best`, `fair`, `fast`, `light` |
+| **Claude** (Anthropic) | 4 | `claude-sonnet-4-6`, `claude-sonnet-4-20250514` |
+| **OpenAI** | 17 | `gpt-4o`, `gpt-4o-mini`, `gpt-5`, `o3`, `o4-mini` |
+| **Gemini** (Google) | 10 | `gemini-2.5-pro`, `gemini-2.5-flash`, `gemini-3-pro-preview` |
+| **Mistral** | 9 | `mistral-small-latest`, `codestral-2501`, `pixtral-large-latest` |
+| **Groq** | 7 | Llama, Qwen, and other optimized models |
+| **Together** | 26 | DeepSeek, Llama, Qwen, and specialty variants |
+| **xAI** | 8 | `grok-3-latest`, `grok-4` series |
+| **Cerebras** | 5 | Llama, Qwen, and DeepSeek variants |
+| **Perplexity** | 2 | `sonar`, `sonar-pro` (web search capable) |
 
-| Name | Context size |
-| --- | --- |
-| gemini-1.5-flash | 1000000 |
-| gemini-1.5-pro | 1000000 |
-| gemini-2.0-flash-001 | 1000000 |
-| claude-3-haiku-20240307 | 200000 |
-| claude-3-opus-20240229 | 200000 |
-| claude-3-5-sonnet-20240620 | 200000 |
-| claude-3-5-sonnet-latest | 200000 |
-| claude-3-7-sonnet-latest | 200000 |
-| chatgpt-4o-latest | 128000 |
-| gpt-4o | 128000 |
-| gpt-4o-2024-08-06 | 128000 |
-| gpt-4o-mini | 128000 |
-| gpt-4-turbo | 128000 |
-| pixtral-12b-latest | 128000 |
-| pixtral-large-latest | 128000 |
-| gpt-3.5-turbo | 4191 |
-</details> 
+**Key Model Characteristics:**
 
-  ##### Model without vision
-   <details>
+| Feature | Models | Context |
+|---------|--------|---------|
+| **Vision Capable** | GPT-4O, Gemini 2.5+, Claude, Mistral Pixtral | Analyze images/video |
+| **Highest Context** | Alter models, Gemini | 1M+ tokens |
+| **Fastest** | Alter `light`, GPT-4O mini, Gemini Flash | Low latency |
+| **Most Capable** | GPT-4O, Gemini 2.5 Pro, Claude Sonnet | Complex reasoning |
+| **Web Search** | Perplexity Sonar | Real-time info |
+| **Code Specialist** | Mistral Codestral | Code generation |
 
-| Name | Context size |
-| --- | --- |
-| codestral-2501 | 256000 |
-| deepseek-ai/DeepSeek-R1 | 163840 |
-| deepseek-ai/DeepSeek-V3 | 131072 |
-| meta-llama/Llama-3.1-70B-Instruct-Turbo | 131072 |
-| meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo-128K | 131072 |
-| deepseek-r1-distill-llama-70b | 128000 |
-| llama-3.1-70b-versatile | 128000 |
-| llama-3.1-8b-instant | 128000 |
-| llama-3.1-sonar-large-128k-online | 128000 |
-| llama-3.1-sonar-small-128k-online | 128000 |
-| sonar | 127000 |
-| sonar-pro | 200000 |
-| qwen3-32b | 131072 |
-| mixtral-8x7b-32768 | 32768 |
-| meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo | 32768 |
-| meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo | 32768 |
-| mistral-small-latest | 32768 |
-| nvidia/Llama-3.1-Nemotron-70B-Instruct-HF | 32768 |
-| Qwen/Qwen2.5-72B-Instruct-Turbo | 32768 |
-| Qwen/Qwen2.5-72B-Instruct-Turbo-lora | 32768 |
-| Qwen/Qwen2.5-7B-Instruct-Turbo | 32768 |
-| mixtral-8x7b-instruct | 16384 |
-| mistral-7b-instruct | 16384 |
-| llama-3.3-70b | 8192 |
-| llama-3.3-70b-specdec | 8192 |
-| llama-3.3-70b-versatile | 8192 |
-| llama3-70b-8192 | 8192 |
-| llama3-8b-8192 | 8192 |
-| llama3.1-8b | 8192 |
-| meta-llama/Llama-3-70b-chat-hf | 8192 |
-| meta-llama/Llama-3-8b-chat-hf | 8192 |
-| Gryphe/MythoMax-L2-13b | 4096 |
-</details>
+**For the complete current list of all 92+ models**, check available models directly through the API:
+
+```bash
+curl https://alterhq.com/api/models \
+  -H "Authorization: Bearer YOUR_API_KEY"
+```
+
+Or see the **[API Gateway Guide](../guides/api-gateway.md)** for detailed information on model selection and usage.
 
 ### Using Your API Key
 
